@@ -1,11 +1,11 @@
 # java-assignment-2
-Create a Java ShoppingCart Web Application using Spring MVC and Hibernate(Same as Flipkart)The following features are implemented in this
+Create a Java ShoppingCart Web Application using Spring MVC and Hibernate(Same as Flipkart)The following features are implemented in this - 
 
-  •Admin login
-  •Product addition by admin
-  •User login•Add item to cart 
-  •Delete item to cart
-  •Billing of the items in cart
+  1. Admin login
+  2. Product addition by admin
+  3. User login•Add item to cart 
+  4. Delete item to cart
+  5. Billing of the items in cart
   
 #Solution - 
 It's a Java based Shopping Cart Web Application using SPring MVC and Hibernate.

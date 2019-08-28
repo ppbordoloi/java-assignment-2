@@ -1,0 +1,50 @@
+CREATE DATABASE db_assignment_2;
+
+USE db_assignment_2;
+
+CREATE TABLE `user` (
+  id INT(20) NOT NULL AUTO_INCREMENT,
+  NAME VARCHAR(255) NULL,
+  email VARCHAR (255) NOT NULL,
+  PASSWORD VARCHAR (255) NOT NULL,
+  is_admin INT(1) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE `product` (
+  id INT(20) NOT NULL AUTO_INCREMENT,
+  NAME VARCHAR(255) NULL,
+  price DECIMAL (10,2) NOT NULL,
+  stock INT(10) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE `cart` (
+  id INT(20) NOT NULL AUTO_INCREMENT,
+  user_id INT(20) NOT NULL,
+  product_id INT(20) NOT NULL,
+  quantity INT(20) NOT NULL,
+  UNIQUE(user_id,product_id),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE `order_master` (
+  order_id INT(20) NOT NULL AUTO_INCREMENT,
+  user_id INT(20) NOT NULL,
+  PRIMARY KEY (order_id)
+);
+
+CREATE TABLE `order_details` (
+  id INT(20) NOT NULL AUTO_INCREMENT,
+  order_id INT(20) NOT NULL,
+  product_id INT(20) NOT NULL,
+  quantity INT(20) NOT NULL,
+  price DECIMAL (10,2) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+insert  into `user`(`id`,`name`,`email`,`password`,`is_admin`) values 
+(1,'Administrator','admin@gmail.com','admin',1),
+(2,'User1','user1@zaloni.com','1111',0),
+(3,'User2','user2@zaloni.com','2222',0),
+(4,'User3','user3@zaloni.com','3333',0);
